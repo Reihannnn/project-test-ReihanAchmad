@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 0 95%);
+
+}
