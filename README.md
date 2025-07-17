@@ -15,7 +15,7 @@ Berikut adalah tools dan library yang digunakan dalam project ini:
 
 ---
 
-### 📂 Struktur Folder
+
 ### 📂 Struktur Folder
 ```
 test_suitmedia/
