@@ -1,4 +1,3 @@
-updated_readme_content = """
 ## 🚀 React Vite Tailwind Project
 
 ### 🧾 Deskripsi Singkat
@@ -15,7 +14,6 @@ Berikut adalah tools dan library yang digunakan dalam project ini:
 
 ---
 
-
 ### 📂 Struktur Folder
 ```
 test_suitmedia/
@@ -29,7 +27,7 @@ test_suitmedia/
 │   │           ├── Banner.jsx                     # hero section
 │   │           ├── Header.jsx                     # navigation bar
 │   │           ├── Pagination.jsx                 # pagination
-│   │           ├── PostCard.jsx                   # card"
+│   │           ├── PostCard.jsx                   # card
 │   │           ├── PostGrid.jsx                   # layout menyimpan card
 │   ├── components/
 │   │           ├── pages.jsx                      # menyimpan semua components
@@ -44,13 +42,16 @@ test_suitmedia/
 └── vite.config.js
 ```
 
+---
+
 ### 🧪 Cara Menjalankan Project
 Berikut langkah-langkah untuk menjalankan project ini secara lokal:
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/username/nama-repo.git
-   cd nama-repo
+   git clone https://gitlab.com/Reihannnn/project-test-reihanachmadsusilo.git
+   cd project-test-reihanachmadsusilo
+   git checkout reihan-fix
    ```
 
 2. **Install Dependencies**
@@ -69,3 +70,54 @@ Berikut langkah-langkah untuk menjalankan project ini secara lokal:
    ```
 
 ---
+
+### ⚙️ Konfigurasi Tailwind
+`tailwind.config.js`:
+```js
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+`src/index.css`:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+---
+
+
+---
+
+### 🔌 API Integration
+Project ini menggunakan API publik dari Suitmedia untuk menampilkan data artikel atau ide. Berikut adalah konfigurasi endpoint dan parameternya:
+
+```json
+{
+  "url": "https://suitmedia-backend.suitdev.com/api/ideas",
+  "params": {
+    "page[number]": 1,
+    "page[size]": 10,
+    "append[]": ["small_image", "medium_image"],
+    "sort": "published_at" // atau "-published_at" untuk descending
+  }
+}
+```
+
+- `page[number]`: Halaman data yang ingin diambil
+- `page[size]`: Jumlah item per halaman
+- `append[]`: Menambahkan variasi ukuran gambar
+- `sort`: Pengurutan berdasarkan tanggal publikasi (`published_at` atau `-published_at`)
+
+
+### 🙌 Penutup
+Project ini ditujukan untuk pembelajaran dan pengembangan antarmuka website menggunakan stack modern yang ringan dan mudah digunakan. Silakan fork, eksplorasi, dan kembangkan sesuai kebutuhan!
